@@ -1,0 +1,35 @@
+{
+    "name": "bannerkit",
+    "description": "LeanKit ascii art for your viewing pleasure.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/ifandelse/BannerKit",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/ifandelse/BannerKit.git"
+    },
+    "author": "Jim Cowart (http://freshbrewedcode.com/jimcowart)",
+    "keywords": [
+        "LeanKit",
+        "ascii"
+    ],
+    "bugs": {
+        "email": "PleaseJustUseTheIssuesPage@github.com",
+        "url": "http://github.com/ifandelse/BannerKit/issues"
+    },
+    "directories": {
+        "lib": "lib"
+    },
+    "main": "index.js",
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "dependencies": {
+        "colors": ">=0.6.2"
+    },
+    "devDependencies": {},
+    "scripts": {},
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://opensource.org/licenses/MIT"
+    }]
+}
