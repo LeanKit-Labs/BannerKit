@@ -2,10 +2,10 @@
     "name": "bannerkit",
     "description": "LeanKit ascii art for your viewing pleasure.",
     "version": "0.1.0",
-    "homepage": "https://github.com/ifandelse/BannerKit",
+    "homepage": "https://github.com/LeanKit-Labs/BannerKit",
     "repository": {
         "type": "git",
-        "url": "git://github.com/ifandelse/BannerKit.git"
+        "url": "git://github.com/LeanKit-Labs/BannerKit.git"
     },
     "author": "Jim Cowart (http://freshbrewedcode.com/jimcowart)",
     "keywords": [
@@ -14,7 +14,7 @@
     ],
     "bugs": {
         "email": "PleaseJustUseTheIssuesPage@github.com",
-        "url": "http://github.com/ifandelse/BannerKit/issues"
+        "url": "http://github.com/LeanKit-Labs/BannerKit/issues"
     },
     "directories": {
         "lib": "lib"
