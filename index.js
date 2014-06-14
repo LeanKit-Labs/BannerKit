@@ -7,9 +7,9 @@ var bannerKit = {
     }
 };
 
-var artDir = path.join(__dirname, "art");
+var artDir = path.join(__dirname, "art/");
 
-fs.readdirSync("art").forEach(function(file) {
+fs.readdirSync(artDir).forEach(function(file) {
     bannerKit.registerBanner(file.slice(0, -3), require(path.join(artDir, file)));
 });
 
