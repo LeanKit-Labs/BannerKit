@@ -1,16 +1,25 @@
-var fs = require("fs");
-var path = require("path");
+var fs = require( "fs" );
+var path = require( "path" );
 
-var bannerKit = {
-    registerBanner: function(name, banner) {
-        this[name] = banner;
-    }
-};
+var banners = {};
 
-var artDir = path.join(__dirname, "art/");
+function addPath( dir ) {
+	var args = Array.prototype.slice.call( arguments, 0 );
+	var joined = arguments.length == 1 ? dir : path.join.apply( null, args );
+	var full = path.resolve( joined );
+	fs.readdirSync( full ).forEach( function( file ) {
+		registerBanner( file.slice( 0, -3 ), require( path.join( full, file ) ) );
+	} );
+	return banners;
+}
 
-fs.readdirSync(artDir).forEach(function(file) {
-    bannerKit.registerBanner(file.slice(0, -3), require(path.join(artDir, file)));
-});
+function registerBanner( name, banner ) {
+	banners[ name ] = banner;
+	return banners;
+}
 
-module.exports = bannerKit;
+addPath( __dirname, "art/" );
+banners.addPath = addPath;
+banners.registerBanner = registerBanner;
+
+module.exports = banners;
